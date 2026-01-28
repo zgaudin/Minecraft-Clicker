@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c0bf1so35lnhi"]
+
+[ext_resource type="AudioStream" uid="uid://w7b3g0ll78j6" path="res://C418 - Aria Math (Minecraft Volume Beta).mp3" id="1_p76w3"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer" unique_id=1700497227]
+stream = ExtResource("1_p76w3")
+autoplay = true
