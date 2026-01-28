@@ -1,23 +1,23 @@
-class_name Upgrade02ToolUpgrade
+class_name Upgrade02PickaxeUpgrade
 extends Upgrade
 ## Upgrade 01 - Increases gold each click
 
 ## Load level data
 func _init() -> void:
-	level = Game.ref.data.up_02_levelInterval
-	title = "Iron Tools"
+	level = Game.ref.data.up_02_levelGold
+	title = "Iron Pickaxe"
 	base_cost = 500
 	calculate_cost()
 
 func description() -> String:
-	var description : String = "Double iron from all sources."
-	description += "\nEffects : *2 Iron"
-	description += "\nCost : %s" %current_cost
+	var description : String = "Double gold from all sources."
+	description += "\nEffects : *2 Gold"
+	description += "\nCost : %s" %current_cost + " Iron"
 	
 	return description
 
 func calculate_cost() -> void:
-	current_cost = int(base_cost * pow(5, level))
+	current_cost = int(base_cost * pow(10, level))
 
 
 
@@ -33,7 +33,7 @@ func level_up() -> void:
 	
 	if not error: 
 		level += 1
-		Game.ref.data.up_02_levelInterval = level
+		Game.ref.data.up_02_levelGold = level
 
 		
 		calculate_cost()

@@ -17,7 +17,7 @@ func description() -> String:
 	return description
 
 func calculate_cost() -> void:
-	current_cost = int(base_cost * pow(10, level))
+	current_cost = int(base_cost * pow(5, level))
 
 
 

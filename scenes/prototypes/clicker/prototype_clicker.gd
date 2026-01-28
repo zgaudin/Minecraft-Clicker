@@ -21,7 +21,7 @@ func create_gold() -> void:
 		HandlerDiamond.ref.trigger_clicker()
 		button.icon = ResourceLoader.load("res://Images/Diamond_JE3_BE3.png")
 	
-	elif rand == 1 || rand == 2:
+	elif rand == 1 && Game.ref.data.up_01_unlockIron == 1 || rand == 2 && Game.ref.data.up_01_unlockIron == 1:
 		HandlerIron.ref.trigger_clicker()
 		button.icon = ResourceLoader.load("res://Images/Iron_Ingot_JE3_BE2.png")
 		

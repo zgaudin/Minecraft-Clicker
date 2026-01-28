@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://o2hukymnyt7g" path="res://scripts/upgrades/iron_upgrades/compo_upgrade6.gd" id="4_bjj2j"]
 [ext_resource type="Script" uid="uid://cc0txp8txjfb1" path="res://scripts/upgrades/iron_upgrades/compo_upgrade7.gd" id="5_kpond"]
 [ext_resource type="Script" uid="uid://dw8l7ni1qwshd" path="res://scripts/upgrades/iron_upgrades/compo_upgrade8.gd" id="6_te0sp"]
+[ext_resource type="Script" uid="uid://buomvu7dubnnm" path="res://scripts/upgrades/iron_upgrades/compo_upgrade13.gd" id="7_mbkh4"]
 
 [node name="PrototypeUpgrades" type="Control" unique_id=1024595591]
 layout_mode = 3
@@ -71,6 +72,15 @@ theme_override_constants/margin_right = 64
 [node name="CompoUpgrade7" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_k2hmu")]
 layout_mode = 2
 script = ExtResource("5_kpond")
+
+[node name="MarginContainer9" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1448345924]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="CompoUpgrade13" parent="MarginContainer/VBoxContainer/MarginContainer9" unique_id=1848450648 instance=ExtResource("2_k2hmu")]
+layout_mode = 2
+script = ExtResource("7_mbkh4")
 
 [node name="MarginContainer8" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=342301591]
 layout_mode = 2

@@ -1,7 +1,7 @@
 class_name Data
 extends Resource
 
-@export var gold : int = 5000000
+@export var gold : int = 0
 
 @export var up_01_level : int = 0
 
@@ -13,7 +13,7 @@ extends Resource
 
 ##--------------------------------------------------------------------------
 
-@export var iron : int = 5000000
+@export var iron : int = 0
 
 @export var up_02_level : int = 0
 
@@ -21,11 +21,13 @@ extends Resource
 
 @export var up_02_levelInterval : int = 0
 
+@export var up_02_levelGold : int = 0
+
 @export var up_01_unlockDiamond : int = 0
 
 ##--------------------------------------------------------------------------
 
-@export var diamond : int = 5000000
+@export var diamond : int = 0
 
 @export var up_03_level : int = 0
 

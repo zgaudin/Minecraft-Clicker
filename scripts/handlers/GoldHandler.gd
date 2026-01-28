@@ -41,6 +41,8 @@ func trigger_clicker() -> void:
 	quantity += (Game.ref.data.up_01_level)
 	if Game.ref.data.up_01_levelInterval > 0 :
 		quantity *= (2 * Game.ref.data.up_01_levelInterval)
+	if Game.ref.data.up_02_levelGold > 0 :
+		quantity *= (2 * Game.ref.data.up_02_levelGold)
 	
 	
 	create_gold(quantity)
@@ -50,5 +52,7 @@ func trigger_generator() -> void:
 	quantity += (Game.ref.data.up_01_levelG)
 	if Game.ref.data.up_01_levelInterval > 0 :
 		quantity *= (2 * Game.ref.data.up_01_levelInterval)
+	if Game.ref.data.up_02_levelGold > 0 :
+		quantity *= (2 * Game.ref.data.up_02_levelGold)
 	
 	create_gold(quantity)
