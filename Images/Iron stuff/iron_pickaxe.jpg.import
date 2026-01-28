@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://cjt5ha5o0l4x6"
+path="res://.godot/imported/iron_pickaxe.jpg-4dcaf780349632cebea4ff1ece47bcd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Iron stuff/iron_pickaxe.jpg"
+dest_files=["res://.godot/imported/iron_pickaxe.jpg-4dcaf780349632cebea4ff1ece47bcd6.ctex"]
 
 [params]
 

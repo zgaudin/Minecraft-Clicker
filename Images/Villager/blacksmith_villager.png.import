@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://c1tutks1d6mgg"
+path="res://.godot/imported/blacksmith_villager.png-23529e80f32afb6afd9530438e943ad5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Villager/blacksmith_villager.png"
+dest_files=["res://.godot/imported/blacksmith_villager.png-23529e80f32afb6afd9530438e943ad5.ctex"]
 
 [params]
 

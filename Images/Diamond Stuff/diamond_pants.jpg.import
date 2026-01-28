@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://ci12kvxmqax0n"
+path="res://.godot/imported/diamond_pants.jpg-6fe5d5a348585342000a5848ed5aa481.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Diamond Stuff/diamond_pants.jpg"
+dest_files=["res://.godot/imported/diamond_pants.jpg-6fe5d5a348585342000a5848ed5aa481.ctex"]
 
 [params]
 

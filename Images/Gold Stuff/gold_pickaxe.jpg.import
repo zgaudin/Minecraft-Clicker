@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://8sn0q5uyw758"
+path="res://.godot/imported/gold_pickaxe.jpg-486565f61a626412915b7e0423222124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Gold Stuff/gold_pickaxe.jpg"
+dest_files=["res://.godot/imported/gold_pickaxe.jpg-486565f61a626412915b7e0423222124.ctex"]
 
 [params]
 

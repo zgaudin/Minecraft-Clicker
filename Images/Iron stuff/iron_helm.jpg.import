@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://bcmvtlt7mjqnl"
+path="res://.godot/imported/iron_helm.jpg-922bc25debb94568acfb991c8a2a7f6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Iron stuff/iron_helm.jpg"
+dest_files=["res://.godot/imported/iron_helm.jpg-922bc25debb94568acfb991c8a2a7f6a.ctex"]
 
 [params]
 

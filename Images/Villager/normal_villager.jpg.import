@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://b2ukpcet01giu"
+path="res://.godot/imported/normal_villager.jpg-41e718ffec5a480ef59576a1bafb3039.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Villager/normal_villager.jpg"
+dest_files=["res://.godot/imported/normal_villager.jpg-41e718ffec5a480ef59576a1bafb3039.ctex"]
 
 [params]
 

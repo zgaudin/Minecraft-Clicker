@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ynbfm5orehi"
-path="res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"
+uid="uid://b0o6nghdr8pyq"
+path="res://.godot/imported/gold_chest.jpg-035e7ba041ba87aa9b0ac04a9a157d05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Diamond_JE3_BE3.png"
-dest_files=["res://.godot/imported/Diamond_JE3_BE3.png-f189dd4c3ad14c7246c8af23854486a0.ctex"]
+source_file="res://Images/Gold Stuff/gold_chest.jpg"
+dest_files=["res://.godot/imported/gold_chest.jpg-035e7ba041ba87aa9b0ac04a9a157d05.ctex"]
 
 [params]
 
