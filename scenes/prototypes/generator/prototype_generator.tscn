@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://btt8gc7vuisdd"]
+
+[ext_resource type="Script" uid="uid://bpxjpejsc077a" path="res://scenes/prototypes/generator/prototype_generator.gd" id="1_7p4aa"]
+[ext_resource type="Texture2D" uid="uid://8igieis842ba" path="res://Images/Gold_Ingot_JE4_BE2.png" id="2_dmlbc"]
+[ext_resource type="Script" uid="uid://dy3vlqe21r14m" path="res://scenes/prototypes/userInterface/label.gd" id="2_wb7vv"]
+[ext_resource type="Script" uid="uid://bd0mqynxvpuny" path="res://scenes/prototypes/generator/GeneratorAnimation.gd" id="3_f0tck"]
+
+[node name="PrototypeGenerator" type="Control" unique_id=1621736068 node_paths=PackedStringArray("button", "timer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7p4aa")
+button = NodePath("GeneratorButton")
+timer = NodePath("Timer")
+
+[node name="GeneratorButton" type="Button" parent="." unique_id=894258768]
+custom_minimum_size = Vector2(140, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -154.5
+offset_right = 162.0
+offset_bottom = 154.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_dmlbc")
+flat = true
+alignment = 0
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_f0tck")
+
+[node name="Label" type="Label" parent="." unique_id=233384231]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_type_variation = &"HeaderLarge"
+text = "Gold: <no_value>"
+horizontal_alignment = 1
+script = ExtResource("2_wb7vv")
+
+[node name="Timer" type="Timer" parent="." unique_id=1747316617]
+
+[connection signal="pressed" from="GeneratorButton" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

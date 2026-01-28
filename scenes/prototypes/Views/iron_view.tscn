@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://b7f1ygl1thugc"]
+
+[ext_resource type="Script" uid="uid://bv7fvexus5ef3" path="res://scenes/prototypes/upgrades/prototype_upgrades.gd" id="1_kpond"]
+[ext_resource type="PackedScene" uid="uid://k38gg867jjpj" path="res://scenes/prototypes/upgrades/components/compo_upgrade.tscn" id="2_k2hmu"]
+[ext_resource type="Script" uid="uid://48cbw8pic0gl" path="res://scripts/upgrades/iron_upgrades/compo_upgrade5.gd" id="3_7bisx"]
+[ext_resource type="Script" uid="uid://o2hukymnyt7g" path="res://scripts/upgrades/iron_upgrades/compo_upgrade6.gd" id="4_bjj2j"]
+[ext_resource type="Script" uid="uid://cc0txp8txjfb1" path="res://scripts/upgrades/iron_upgrades/compo_upgrade7.gd" id="5_kpond"]
+[ext_resource type="Script" uid="uid://dw8l7ni1qwshd" path="res://scripts/upgrades/iron_upgrades/compo_upgrade8.gd" id="6_te0sp"]
+
+[node name="PrototypeUpgrades" type="Control" unique_id=1024595591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kpond")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1423282078]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1152160119]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HeaderLarge" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1333742052]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "Iron Upgrades"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1060724819]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1237578210]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=2073123055]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="CompoUpgrade5" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 instance=ExtResource("2_k2hmu")]
+layout_mode = 2
+script = ExtResource("3_7bisx")
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1342862041]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="CompoUpgrade6" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_k2hmu")]
+layout_mode = 2
+script = ExtResource("4_bjj2j")
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1167484345]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="CompoUpgrade7" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_k2hmu")]
+layout_mode = 2
+script = ExtResource("5_kpond")
+
+[node name="MarginContainer8" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=342301591]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="CompoUpgrade8" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_k2hmu")]
+layout_mode = 2
+script = ExtResource("6_te0sp")

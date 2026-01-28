@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://dvexxmiw1mplu"]
+
+[ext_resource type="Script" uid="uid://cljpwtvctye7u" path="res://scenes/prototypes/userInterface/user_interface.gd" id="1_8dsr6"]
+[ext_resource type="PackedScene" uid="uid://btt8gc7vuisdd" path="res://scenes/prototypes/generator/prototype_generator.tscn" id="1_wbsu4"]
+[ext_resource type="Script" uid="uid://dy3vlqe21r14m" path="res://scenes/prototypes/userInterface/label.gd" id="2_bm1g8"]
+[ext_resource type="PackedScene" uid="uid://c4ttqn7t6jwon" path="res://scenes/prototypes/clicker/prototype_clicker.tscn" id="3_e1dme"]
+[ext_resource type="Script" uid="uid://fhbu2v3x04qf" path="res://scenes/prototypes/userInterface/iron_label.gd" id="3_tj2mm"]
+[ext_resource type="Script" uid="uid://c5xpcuu72jiit" path="res://scenes/prototypes/userInterface/LabelDiamond.gd" id="4_880fj"]
+[ext_resource type="PackedScene" uid="uid://seeha5kgklpk" path="res://scenes/prototypes/upgrades/prototype_upgrades.tscn" id="5_nu4s8"]
+[ext_resource type="PackedScene" uid="uid://b7f1ygl1thugc" path="res://scenes/prototypes/Views/iron_view.tscn" id="6_2uh3x"]
+[ext_resource type="PackedScene" uid="uid://dsbhvs76oymcl" path="res://scenes/prototypes/Views/diamond_view.tscn" id="8_q16xc"]
+
+[node name="UserInterface" type="Control" unique_id=856805466]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8dsr6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1062974404]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="Control" parent="HBoxContainer" unique_id=1291792460]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel" unique_id=887418626]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Navigator" type="Control" parent="HBoxContainer/LeftPanel/VBoxContainer" unique_id=526087568]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator" unique_id=1584306696]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer" unique_id=1525939813]
+layout_mode = 2
+
+[node name="Clickewr" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=2029970410]
+layout_mode = 2
+text = "Clicker"
+
+[node name="Generator" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=728054609]
+layout_mode = 2
+text = "Generator"
+
+[node name="Upgrades" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=706353752]
+layout_mode = 2
+text = "Gold Upgrades"
+
+[node name="Iron" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=1650716043]
+layout_mode = 2
+text = "Iron Upgrades"
+
+[node name="Diamond" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=1595046312]
+layout_mode = 2
+text = "Diamond Upgrades"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftPanel/VBoxContainer" unique_id=925694849]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/LeftPanel/VBoxContainer/MarginContainer" unique_id=2088780694]
+layout_mode = 2
+
+[node name="Resources" type="Control" parent="HBoxContainer/LeftPanel/VBoxContainer" unique_id=1002239409]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources" unique_id=818994924]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer" unique_id=1494502016]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=1806770600]
+layout_mode = 2
+text = "Gold : 0
+"
+script = ExtResource("2_bm1g8")
+
+[node name="IronLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=2042120062]
+layout_mode = 2
+text = "Iron : 0"
+script = ExtResource("3_tj2mm")
+
+[node name="DiamondLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=2110976137]
+layout_mode = 2
+text = "Diamond : 0"
+script = ExtResource("4_880fj")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=747859879]
+layout_mode = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/MarginContainer" unique_id=2092187667]
+layout_mode = 2
+
+[node name="MainView" type="Control" parent="HBoxContainer" unique_id=31037188]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PrototypeGenerator" parent="HBoxContainer/MainView" unique_id=1621736068 node_paths=PackedStringArray("user_interface") instance=ExtResource("1_wbsu4")]
+layout_mode = 1
+user_interface = NodePath("../../..")
+
+[node name="PrototypeClicker" parent="HBoxContainer/MainView" unique_id=185003929 node_paths=PackedStringArray("user_interface") instance=ExtResource("3_e1dme")]
+layout_mode = 1
+user_interface = NodePath("../../..")
+
+[node name="PrototypeUpgrades" parent="HBoxContainer/MainView" unique_id=1024595591 node_paths=PackedStringArray("user_interface") instance=ExtResource("5_nu4s8")]
+layout_mode = 1
+user_interface = NodePath("../../..")
+view = 2
+
+[node name="IronView" parent="HBoxContainer/MainView" unique_id=817278361 node_paths=PackedStringArray("user_interface") instance=ExtResource("6_2uh3x")]
+layout_mode = 1
+user_interface = NodePath("../../..")
+view = 3
+
+[node name="DiamondView" parent="HBoxContainer/MainView" unique_id=438399234 node_paths=PackedStringArray("user_interface") instance=ExtResource("8_q16xc")]
+layout_mode = 1
+user_interface = NodePath("../../..")
+view = 4
+
+[connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Clickewr" to="." method="_on_generator_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Generator" to="." method="_on_clicker_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Upgrades" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Iron" to="." method="_on_iron_pressed"]
+[connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Diamond" to="." method="_on_diamond_pressed"]

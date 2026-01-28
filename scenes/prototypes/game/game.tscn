@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ug6wm6hlmbru"]
+
+[ext_resource type="Script" uid="uid://clowg64ffbash" path="res://scenes/prototypes/game/game.gd" id="1_ttvgi"]
+[ext_resource type="PackedScene" uid="uid://dvexxmiw1mplu" path="res://scenes/prototypes/userInterface/user_interface.tscn" id="2_5d0xn"]
+[ext_resource type="Script" uid="uid://bu06ok8ijpvsq" path="res://scripts/handlers/GoldHandler.gd" id="2_m7hh6"]
+[ext_resource type="Script" uid="uid://dom82y4ya42en" path="res://scripts/handlers/IronHandler.gd" id="3_wtuc1"]
+[ext_resource type="Script" uid="uid://cfdn5k1mrmrtw" path="res://scripts/handlers/handler_gold_generator.gd" id="6_gfk75"]
+[ext_resource type="Script" uid="uid://c6xjvtin85b3w" path="res://scripts/handlers/DiamondHandler.gd" id="6_ue6hx"]
+
+[node name="Game" type="Node" unique_id=391065008]
+script = ExtResource("1_ttvgi")
+scene_user_interface = ExtResource("2_5d0xn")
+
+[node name="Handlers" type="Node" parent="." unique_id=1429738676]
+
+[node name="Gold" type="Node" parent="Handlers" unique_id=1122633368]
+script = ExtResource("2_m7hh6")
+
+[node name="Iron" type="Node" parent="Handlers" unique_id=338229189]
+script = ExtResource("3_wtuc1")
+
+[node name="GoldGenerator" type="Node" parent="Handlers" unique_id=1362239810]
+script = ExtResource("6_gfk75")
+
+[node name="Timer" type="Timer" parent="Handlers/GoldGenerator" unique_id=30062153]
+
+[node name="Diamond" type="Node" parent="Handlers" unique_id=1136149990]
+script = ExtResource("6_ue6hx")
+
+[connection signal="timeout" from="Handlers/GoldGenerator/Timer" to="Handlers/GoldGenerator" method="_on_timer_timeout"]

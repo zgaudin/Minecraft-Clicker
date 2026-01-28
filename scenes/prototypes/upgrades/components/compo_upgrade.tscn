@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://k38gg867jjpj"]
+
+[ext_resource type="Script" uid="uid://bmqtq2a8jldn3" path="res://scripts/upgrades/goldUpgrades/compo_upgrade.gd" id="1_g3dr3"]
+
+[node name="CompoUpgrade" type="Control" unique_id=1592030265 node_paths=PackedStringArray("label_title", "label_description", "button")]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g3dr3")
+label_title = NodePath("MarginContainer/HBoxContainer/Description/VBoxContainer/Title")
+label_description = NodePath("MarginContainer/HBoxContainer/Description/VBoxContainer/RichTextLabel")
+button = NodePath("MarginContainer/HBoxContainer/Buy")
+
+[node name="Panel" type="Panel" parent="." unique_id=680943493]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1089083653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=683694994]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Description" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1044845077]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Description" unique_id=1684742965]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="MarginContainer/HBoxContainer/Description/VBoxContainer" unique_id=1103549264]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Upgrade Title"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/Description/VBoxContainer" unique_id=1737810073]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Upgrade Description
+Effect :
+Cost :"
+
+[node name="Buy" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1959011565]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+text = "Purchase
+"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Buy" to="." method="_on_buy_pressed"]
