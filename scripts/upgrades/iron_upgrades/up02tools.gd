@@ -6,7 +6,7 @@ extends Upgrade
 func _init() -> void:
 	level = Game.ref.data.up_02_levelInterval
 	title = "Iron Tools"
-	base_cost = 500
+	base_cost = 100
 	calculate_cost()
 
 func description() -> String:
