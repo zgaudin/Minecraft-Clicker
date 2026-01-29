@@ -46,4 +46,5 @@ func update_button(_quantity : int = -1) -> void:
 
 func _on_buy_pressed() -> void:
 	#play sound
+	
 	upgrade.level_up()

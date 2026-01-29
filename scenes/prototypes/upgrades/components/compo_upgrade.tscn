@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://k38gg867jjpj"]
 
 [ext_resource type="Script" uid="uid://bmqtq2a8jldn3" path="res://scripts/upgrades/goldUpgrades/compo_upgrade.gd" id="1_g3dr3"]
+[ext_resource type="AudioStream" uid="uid://cm4kv3c446tnx" path="res://Sounds/gaining-experience-minecraft-sound-fx.wav" id="2_jpyen"]
 
 [node name="CompoUpgrade" type="Control" unique_id=1592030265 node_paths=PackedStringArray("label_title", "label_description", "button")]
 custom_minimum_size = Vector2(0, 160)
@@ -69,5 +70,8 @@ custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 text = "Purchase
 "
+
+[node name="GainingExperienceMinecraftSoundFx" type="AudioStreamPlayer" parent="MarginContainer/HBoxContainer/Buy" unique_id=1143831699]
+stream = ExtResource("2_jpyen")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Buy" to="." method="_on_buy_pressed"]
