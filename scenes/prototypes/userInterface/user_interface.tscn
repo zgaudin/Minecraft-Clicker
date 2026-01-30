@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cljpwtvctye7u" path="res://scenes/prototypes/userInterface/user_interface.gd" id="1_8dsr6"]
 [ext_resource type="PackedScene" uid="uid://btt8gc7vuisdd" path="res://scenes/prototypes/generator/prototype_generator.tscn" id="1_wbsu4"]
 [ext_resource type="Script" uid="uid://dy3vlqe21r14m" path="res://scenes/prototypes/userInterface/label.gd" id="2_bm1g8"]
-[ext_resource type="AudioStream" uid="uid://spcf22cumii4" path="res://Sounds/chest-opens-minecraft-sound-fx.wav" id="2_udgbd"]
 [ext_resource type="PackedScene" uid="uid://c4ttqn7t6jwon" path="res://scenes/prototypes/clicker/prototype_clicker.tscn" id="3_e1dme"]
 [ext_resource type="Script" uid="uid://fhbu2v3x04qf" path="res://scenes/prototypes/userInterface/iron_label.gd" id="3_tj2mm"]
 [ext_resource type="Script" uid="uid://c5xpcuu72jiit" path="res://scenes/prototypes/userInterface/LabelDiamond.gd" id="4_880fj"]
@@ -19,10 +18,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8dsr6")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1247847441]
-stream = ExtResource("2_udgbd")
-volume_db = 24.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1062974404]
 layout_mode = 1
