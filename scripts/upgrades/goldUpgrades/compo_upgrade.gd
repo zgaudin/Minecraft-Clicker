@@ -10,6 +10,9 @@ extends Control
 ## Upgrade tthat is displayed
 var upgrade : Upgrade
 
+##audio stuff
+@onready var audio = $MarginContainer/HBoxContainer/Buy/AudioStreamPlayer2D
+
 
 func _ready() -> void:
 	if not upgrade:
@@ -46,5 +49,5 @@ func update_button(_quantity : int = -1) -> void:
 
 func _on_buy_pressed() -> void:
 	#play sound
-	
+	audio.play()
 	upgrade.level_up()

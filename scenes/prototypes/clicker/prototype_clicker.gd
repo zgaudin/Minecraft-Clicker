@@ -5,6 +5,9 @@ var tween: Tween
 
 @export var button : Button
 
+##audio stuff
+@onready var audio = $Button/AudioStreamPlayer2D
+
 func _ready() -> void:
 	super()
 	visible = true
@@ -31,4 +34,5 @@ func create_gold() -> void:
 
 
 func _on_button_pressed() -> void:
+	audio.play()
 	create_gold()
