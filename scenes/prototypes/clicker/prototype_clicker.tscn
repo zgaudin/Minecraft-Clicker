@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://dy3vlqe21r14m" path="res://scenes/prototypes/userInterface/label.gd" id="2_13wmm"]
 [ext_resource type="Texture2D" uid="uid://8igieis842ba" path="res://Images/Gold_Ingot_JE4_BE2.png" id="3_poxp3"]
 [ext_resource type="Script" uid="uid://gx5050y5q1k6" path="res://scenes/prototypes/clicker/ButtonAnimation.gd" id="4_hrlge"]
-[ext_resource type="AudioStream" uid="uid://cjn54c5ls4dhk" path="res://Sounds/item-selection-minecraft-sound-fx.wav" id="5_3irh6"]
 
 [node name="PrototypeClicker" type="Control" unique_id=185003929 node_paths=PackedStringArray("button")]
 layout_mode = 3
@@ -48,11 +47,6 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_hrlge")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button" unique_id=296262206]
-position = Vector2(-797.5, -385.5)
-stream = ExtResource("5_3irh6")
-volume_db = 24.0
 
 [connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
