@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b7f1ygl1thugc"]
 
 [ext_resource type="Script" uid="uid://bv7fvexus5ef3" path="res://scenes/prototypes/upgrades/prototype_upgrades.gd" id="1_kpond"]
+[ext_resource type="Texture2D" uid="uid://cxhjuaq13wrrf" path="res://Images/Overworld_background.webp" id="2_fr54p"]
 [ext_resource type="PackedScene" uid="uid://k38gg867jjpj" path="res://scenes/prototypes/upgrades/components/compo_upgrade.tscn" id="2_k2hmu"]
 [ext_resource type="Script" uid="uid://48cbw8pic0gl" path="res://scripts/upgrades/iron_upgrades/UpCpsCompo.gd" id="3_7bisx"]
 [ext_resource type="Script" uid="uid://o2hukymnyt7g" path="res://scripts/upgrades/iron_upgrades/UpGoldIncreaseGainCompo.gd" id="4_bjj2j"]
@@ -33,6 +34,11 @@ theme_override_constants/margin_bottom = 16
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1152160119]
 layout_mode = 2
 theme_override_constants/separation = 16
+
+[node name="OverworldBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1538106123]
+position = Vector2(947, 528.74994)
+scale = Vector2(1.918, 1.9262875)
+texture = ExtResource("2_fr54p")
 
 [node name="HeaderLarge" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1333742052]
 layout_mode = 2

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://copc2icn624b1" path="res://scripts/upgrades/diamond_upgrades/UpDiamondIronCompo.gd" id="6_qccou"]
 [ext_resource type="Script" uid="uid://b2mksg12ka4w5" path="res://scripts/upgrades/diamond_upgrades/UpDiamondGenCompo.gd" id="7_sqecc"]
 [ext_resource type="Script" uid="uid://dwq6u0m46llcm" path="res://scripts/upgrades/diamond_upgrades/PrestigeCompo.gd" id="8_b8rrl"]
+[ext_resource type="Texture2D" uid="uid://cxhjuaq13wrrf" path="res://Images/Overworld_background.webp" id="9_4l4rj"]
 
 [node name="PrototypeUpgrades" type="Control" unique_id=1024595591]
 layout_mode = 3
@@ -33,6 +34,11 @@ theme_override_constants/margin_bottom = 16
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1152160119]
 layout_mode = 2
 theme_override_constants/separation = 16
+
+[node name="OverworldBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=939784686]
+position = Vector2(946, 522.75)
+scale = Vector2(1.922, 1.9262878)
+texture = ExtResource("9_4l4rj")
 
 [node name="HeaderLarge" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1333742052]
 layout_mode = 2
