@@ -72,7 +72,7 @@ func calculate_overall_multiplier() -> float:
 	
 	#Gold Gain Increases Gold Gain
 	if Game.ref.data.gold_increase_gain > 0:
-		quantity *= log(Game.ref.data.gold_increase_gain * gold()) 
+		quantity += log(Game.ref.data.gold_increase_gain * gold()) 
 	
 	#DIAMOND UPGRADES -----------
 	
