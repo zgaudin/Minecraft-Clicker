@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bv7fvexus5ef3" path="res://scenes/prototypes/upgrades/prototype_upgrades.gd" id="1_tksxu"]
 [ext_resource type="PackedScene" uid="uid://k38gg867jjpj" path="res://scenes/prototypes/upgrades/components/compo_upgrade.tscn" id="2_vym8l"]
-[ext_resource type="Script" uid="uid://ytgnhcxre3jo" path="res://scripts/upgrades/goldUpgrades/compo_upgrade2.gd" id="3_5enos"]
-[ext_resource type="Script" uid="uid://byeg68f0vka5k" path="res://scripts/upgrades/goldUpgrades/compo_upgrade3.gd" id="4_dd701"]
-[ext_resource type="Script" uid="uid://b7cc68gi1un6n" path="res://scripts/upgrades/goldUpgrades/compo_upgrade4.gd" id="5_gj52l"]
+[ext_resource type="Script" uid="uid://ytgnhcxre3jo" path="res://scripts/upgrades/goldUpgrades/ClickerMultiCompo.gd" id="3_5enos"]
+[ext_resource type="Script" uid="uid://byeg68f0vka5k" path="res://scripts/upgrades/goldUpgrades/UpGoldDoubleCompo.gd" id="4_dd701"]
+[ext_resource type="Script" uid="uid://b7cc68gi1un6n" path="res://scripts/upgrades/goldUpgrades/GoldResetCompo.gd" id="5_gj52l"]
 
 [node name="PrototypeUpgrades" type="Control" unique_id=1024595591]
 layout_mode = 3
@@ -49,7 +49,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 instance=ExtResource("2_vym8l")]
+[node name="ClickerUp" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 instance=ExtResource("2_vym8l")]
 layout_mode = 2
 
 [node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1342862041]
@@ -57,7 +57,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade2" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_vym8l")]
+[node name="ClickMulti" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_vym8l")]
 layout_mode = 2
 script = ExtResource("3_5enos")
 
@@ -66,7 +66,7 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade3" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_vym8l")]
+[node name="ClickCoolDown" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_vym8l")]
 layout_mode = 2
 script = ExtResource("4_dd701")
 
@@ -75,6 +75,6 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade4" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_vym8l")]
+[node name="Reset" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_vym8l")]
 layout_mode = 2
 script = ExtResource("5_gj52l")

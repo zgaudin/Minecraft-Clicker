@@ -1,45 +1,54 @@
 class_name Data
 extends Resource
 
-@export var gold : int = 0
+@export var gold : float = 0
 
-@export var up_01_level : int = 0
+@export var click_up_level : int = 0
 
-@export var up_01_levelG : int = 0
+@export var click_multi_level : int = 0
 
-@export var up_01_levelInterval : int = 0
+@export var gold_double_level : int = 0
 
-@export var up_01_unlockIron : int = 0
+@export var gold_reset_level : int = 0
 
 ##--------------------------------------------------------------------------
 
-@export var iron : int = 0
+@export var iron : float = 0
 
-@export var up_02_level : int = 0
+@export var cps_level : int = 0
 
-@export var up_02_levelG : int = 0
+@export var gold_gain_multi : int = 0
 
-@export var up_02_levelInterval : int = 0
+@export var gold_increase_gain : int = 0
 
-@export var up_02_levelGold : int = 0
+@export var iron_multi : int = 0
 
-@export var up_01_unlockDiamond : int = 0
+@export var iron_gen : int = 0
+
+@export var iron_reset_level : int = 0
 
 ##--------------------------------------------------------------------------
 
 @export var diamond : int = 0
 
-@export var up_03_level : int = 0
+@export var diron_multi : int = 0
 
-@export var up_03_levelG : int = 0
+@export var gold_expo : int = 0
 
-@export var up_03_levelInterval : int = 0
+@export var diamond_multi : int = 0
 
-@export var up_01_Win : int = 0
+@export var diamond_iron : int = 0
 
+@export var diamond_gen : int = 0
 
+@export var prestige : int = 0
 
+##--------------------------------------------------------------------------
 
+@export var prestige_point : int = 0
 
+@export var gold_gain_100x : int = 0
 
-@export var iron_upgrades : DataIronUpgrades = DataIronUpgrades.new()
+@export var iron_gain_10x : int = 0
+
+@export var diamond_gain10x : int = 0

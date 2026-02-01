@@ -13,21 +13,21 @@ func _enter_tree() -> void:
 	queue_free()
 
 
-signal iron_created(quantity : int)
+signal iron_created(quantity : float)
 
-signal iron_consumed(quantity : int)
+signal iron_consumed(quantity : float)
 
 
-func iron() -> int:
+func iron() -> float:
 	return Game.ref.data.iron
 
 
-func create_iron(quantity : int) -> void:
+func create_iron(quantity : float) -> void:
 	Game.ref.data.iron += quantity
 	iron_created.emit(quantity)
 
 
-func consume_iron(quantity : int) -> Error:
+func consume_iron(quantity : float) -> Error:
 	if quantity > Game.ref.data.iron:
 		return Error.FAILED
 	
@@ -37,18 +37,41 @@ func consume_iron(quantity : int) -> Error:
 	return Error.OK
 
 func trigger_clicker() -> void:
-	var quantity : int = 1
-	quantity += (Game.ref.data.up_02_level)
-	if Game.ref.data.up_02_levelInterval > 0 :
-		quantity *= (2 * Game.ref.data.up_02_levelInterval)
-	
+	var quantity : float = 0
+	quantity = calculate_iron_multiplier()
 	
 	create_iron(quantity)
 
-func trigger_generator() -> void:
-	var quantity : int = 1
-	quantity += (Game.ref.data.up_02_levelG)
-	if Game.ref.data.up_02_levelInterval > 0 :
-		quantity *= (2 * Game.ref.data.up_02_levelInterval)
+func calculate_iron_multiplier() -> float:
+	var quantity : float = 1
 	
+	#IRON UPGRADES --------------
+	
+	#Iron Multiplier
+	if Game.ref.data.iron_multi > 0:
+		quantity *= 1.2 * Game.ref.data.iron_multi
+	
+	#DIAMOND UPGRADES --------------
+	
+	#DIron Multiplier
+	if Game.ref.data.diron_multi > 0:
+		quantity *= 3 * Game.ref.data.diron_multi
+	
+	#Iron Multiplier based on diamond count
+	if Game.ref.data.diamond_iron > 0:
+		quantity *= (Game.ref.data.diamond_iron * (.1 * Game.ref.data.diamond))
+	
+	print("Iron Multiplier ", quantity)
+
+
+	return quantity
+
+func trigger_clicker_gen() -> void:
+	var quantity : float = 1
+	quantity = calculate_iron_multiplier()
+	quantity *= iron() * .05
+	
+	print(quantity)
 	create_iron(quantity)
+	
+	print(iron())

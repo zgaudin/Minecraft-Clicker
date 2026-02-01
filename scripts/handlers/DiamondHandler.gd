@@ -37,18 +37,24 @@ func consume_diamond(quantity : int) -> Error:
 	return Error.OK
 
 func trigger_clicker() -> void:
-	var quantity : int = 1
-	quantity += (Game.ref.data.up_03_level)
-	if Game.ref.data.up_03_levelInterval > 0 :
-		quantity *= (2 * Game.ref.data.up_03_levelInterval)
-	
+	var quantity : float = calculate_overall_multiplier()
 	
 	create_diamond(quantity)
 
 func trigger_generator() -> void:
 	var quantity : int = 1
-	quantity += (Game.ref.data.up_03_levelG)
-	if Game.ref.data.up_03_levelInterval > 0 :
-		quantity *= (2 * Game.ref.data.up_03_levelInterval)
 	
 	create_diamond(quantity)
+
+func calculate_overall_multiplier() -> float:
+	var quantity : float = 1.0
+	
+	if Game.ref.data.diamond_multi > 0:
+		quantity *= (3 * Game.ref.data.diamond_multi)
+	
+	print("Diamond Multiplier ", quantity)
+	
+	return quantity
+
+func trigger_clicker_gen() -> void:
+	create_diamond(Game.ref.data.diamond_gen * (.5 *diamond()))

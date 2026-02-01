@@ -1,0 +1,63 @@
+class_name GoldReset
+extends Control
+## Component Displaying an Upgrade
+
+## Reference to the stuff in the upgrade box
+@export var label_title : Label
+@export var label_description : RichTextLabel
+@export var button : Button
+
+@onready var gold_click : UpGoldClick = $UpGoldClick
+
+## Upgrade tthat is displayed
+var upgrade : Upgrade
+
+##audio stuff
+@onready var audio = $MarginContainer/HBoxContainer/Buy/AudioStreamPlayer2D
+
+
+func _ready() -> void:
+	if not upgrade:
+		upgrade = UpGoldReset.new()
+	
+	update_label_title()
+	update_label_description()
+	update_button()
+	
+	HandlerGold.ref.gold_created.connect(update_button)
+	HandlerGold.ref.gold_consumed.connect(update_button)
+	
+	
+	
+	upgrade.leveled_up.connect(update_label_title)
+	upgrade.leveled_up.connect(update_label_description)
+	upgrade.leveled_up.connect(update_button)
+
+func _process(delta) -> void:
+	upgrade.calculate_cost()
+
+func update_label_title() -> void:
+	var text : String = upgrade.title + " (%s)" %upgrade.level
+	label_title.text = text
+
+
+func update_label_description() -> void:
+	label_description.text = upgrade.description()
+
+
+func update_button(_quantity : int = -1) -> void:
+	if Game.ref.data.gold_reset_level == 1:
+		Game.ref.data.gold_reset_level = 0
+		return
+	elif upgrade.can_afford():
+		button.disabled = false
+		return
+	
+	
+	button.disabled = true
+
+
+func _on_buy_pressed() -> void:
+	HandlerIron.ref.create_iron(HandlerGold.ref.gold()/1000)
+	audio.play()
+	upgrade.level_up()

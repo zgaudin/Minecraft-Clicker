@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dvexxmiw1mplu"]
 
 [ext_resource type="Script" uid="uid://cljpwtvctye7u" path="res://scenes/prototypes/userInterface/user_interface.gd" id="1_8dsr6"]
-[ext_resource type="PackedScene" uid="uid://btt8gc7vuisdd" path="res://scenes/prototypes/generator/prototype_generator.tscn" id="1_wbsu4"]
 [ext_resource type="Script" uid="uid://dy3vlqe21r14m" path="res://scenes/prototypes/userInterface/label.gd" id="2_bm1g8"]
 [ext_resource type="AudioStream" uid="uid://spcf22cumii4" path="res://Sounds/chest-opens-minecraft-sound-fx.wav" id="2_udgbd"]
 [ext_resource type="PackedScene" uid="uid://c4ttqn7t6jwon" path="res://scenes/prototypes/clicker/prototype_clicker.tscn" id="3_e1dme"]
@@ -9,6 +8,9 @@
 [ext_resource type="Script" uid="uid://c5xpcuu72jiit" path="res://scenes/prototypes/userInterface/LabelDiamond.gd" id="4_880fj"]
 [ext_resource type="PackedScene" uid="uid://seeha5kgklpk" path="res://scenes/prototypes/upgrades/prototype_upgrades.tscn" id="5_nu4s8"]
 [ext_resource type="PackedScene" uid="uid://b7f1ygl1thugc" path="res://scenes/prototypes/Views/iron_view.tscn" id="6_2uh3x"]
+[ext_resource type="Script" uid="uid://dpa5qugk0lm8o" path="res://scenes/prototypes/userInterface/LabelGoldMulti.gd" id="6_udgbd"]
+[ext_resource type="Script" uid="uid://c436a67fre7ia" path="res://scenes/prototypes/userInterface/LabelIronMulti.gd" id="7_80lge"]
+[ext_resource type="Script" uid="uid://u1g4nsvpkhpj" path="res://scenes/prototypes/userInterface/LabelDiamondMulti.gd" id="8_1jsjs"]
 [ext_resource type="PackedScene" uid="uid://dsbhvs76oymcl" path="res://scenes/prototypes/Views/diamond_view.tscn" id="8_q16xc"]
 
 [node name="UserInterface" type="Control" unique_id=856805466]
@@ -65,10 +67,6 @@ layout_mode = 2
 layout_mode = 2
 text = "Clicker"
 
-[node name="Generator" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=728054609]
-layout_mode = 2
-text = "Generator"
-
 [node name="Upgrades" type="LinkButton" parent="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer" unique_id=706353752]
 layout_mode = 2
 text = "Gold Upgrades"
@@ -106,8 +104,7 @@ layout_mode = 2
 
 [node name="GoldLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=1806770600]
 layout_mode = 2
-text = "Gold : 0
-"
+text = "Gold : 0"
 script = ExtResource("2_bm1g8")
 
 [node name="IronLabel" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=2042120062]
@@ -120,6 +117,25 @@ layout_mode = 2
 text = "Diamond : 0"
 script = ExtResource("4_880fj")
 
+[node name="Label" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=233130453]
+layout_mode = 2
+text = "Multipliers: (Update on click)"
+
+[node name="GoldMulti" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=13173322]
+layout_mode = 2
+text = "Gold Multiplier:"
+script = ExtResource("6_udgbd")
+
+[node name="IronMulti" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=1701556168]
+layout_mode = 2
+text = "Iron Multiplier:"
+script = ExtResource("7_80lge")
+
+[node name="DiamondMulti" type="Label" parent="HBoxContainer/LeftPanel/VBoxContainer/Resources/MarginContainer/VBoxContainer" unique_id=663814048]
+layout_mode = 2
+text = "Diamond Multiplier:"
+script = ExtResource("8_1jsjs")
+
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=747859879]
 layout_mode = 2
 theme_override_constants/margin_top = 16
@@ -131,10 +147,6 @@ layout_mode = 2
 [node name="MainView" type="Control" parent="HBoxContainer" unique_id=31037188]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="PrototypeGenerator" parent="HBoxContainer/MainView" unique_id=1621736068 node_paths=PackedStringArray("user_interface") instance=ExtResource("1_wbsu4")]
-layout_mode = 1
-user_interface = NodePath("../../..")
 
 [node name="PrototypeClicker" parent="HBoxContainer/MainView" unique_id=185003929 node_paths=PackedStringArray("user_interface") instance=ExtResource("3_e1dme")]
 layout_mode = 1
@@ -156,7 +168,6 @@ user_interface = NodePath("../../..")
 view = 4
 
 [connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Clickewr" to="." method="_on_generator_pressed"]
-[connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Generator" to="." method="_on_clicker_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Upgrades" to="." method="_on_upgrades_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Iron" to="." method="_on_iron_pressed"]
 [connection signal="pressed" from="HBoxContainer/LeftPanel/VBoxContainer/Navigator/MarginContainer/VBoxContainer/Diamond" to="." method="_on_diamond_pressed"]

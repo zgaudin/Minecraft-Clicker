@@ -39,3 +39,4 @@ func _on_iron_pressed() -> void:
 func _on_diamond_pressed() -> void:
 	audio.play()
 	navigation_requested.emit(Views.DIAMOND)
+	

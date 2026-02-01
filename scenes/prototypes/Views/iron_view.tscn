@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bv7fvexus5ef3" path="res://scenes/prototypes/upgrades/prototype_upgrades.gd" id="1_kpond"]
 [ext_resource type="PackedScene" uid="uid://k38gg867jjpj" path="res://scenes/prototypes/upgrades/components/compo_upgrade.tscn" id="2_k2hmu"]
-[ext_resource type="Script" uid="uid://48cbw8pic0gl" path="res://scripts/upgrades/iron_upgrades/compo_upgrade5.gd" id="3_7bisx"]
-[ext_resource type="Script" uid="uid://o2hukymnyt7g" path="res://scripts/upgrades/iron_upgrades/compo_upgrade6.gd" id="4_bjj2j"]
-[ext_resource type="Script" uid="uid://cc0txp8txjfb1" path="res://scripts/upgrades/iron_upgrades/compo_upgrade7.gd" id="5_kpond"]
-[ext_resource type="Script" uid="uid://dw8l7ni1qwshd" path="res://scripts/upgrades/iron_upgrades/compo_upgrade8.gd" id="6_te0sp"]
-[ext_resource type="Script" uid="uid://buomvu7dubnnm" path="res://scripts/upgrades/iron_upgrades/compo_upgrade13.gd" id="7_mbkh4"]
+[ext_resource type="Script" uid="uid://48cbw8pic0gl" path="res://scripts/upgrades/iron_upgrades/UpCpsCompo.gd" id="3_7bisx"]
+[ext_resource type="Script" uid="uid://o2hukymnyt7g" path="res://scripts/upgrades/iron_upgrades/UpGoldIncreaseGainCompo.gd" id="4_bjj2j"]
+[ext_resource type="Script" uid="uid://cc0txp8txjfb1" path="res://scripts/upgrades/iron_upgrades/UpGoldGainMultiCompo.gd" id="5_kpond"]
+[ext_resource type="Script" uid="uid://dw8l7ni1qwshd" path="res://scripts/upgrades/iron_upgrades/UpIronResetCompo.gd" id="6_te0sp"]
+[ext_resource type="Script" uid="uid://buomvu7dubnnm" path="res://scripts/upgrades/iron_upgrades/UpIronMultiCompo.gd" id="7_mbkh4"]
+[ext_resource type="Script" uid="uid://c531a1jwav2ew" path="res://scripts/upgrades/iron_upgrades/UpIronGenCompo.gd" id="8_glhvc"]
 
 [node name="PrototypeUpgrades" type="Control" unique_id=1024595591]
 layout_mode = 3
@@ -51,16 +52,21 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade5" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 instance=ExtResource("2_k2hmu")]
+[node name="UpCpsCompo" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 node_paths=PackedStringArray("timer") instance=ExtResource("2_k2hmu")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("3_7bisx")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="MarginContainer/VBoxContainer/MarginContainer2/UpCpsCompo" unique_id=1314065676]
 
 [node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1342862041]
 layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade6" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_k2hmu")]
+[node name="UpGoldIncreaseGainCompo" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_k2hmu")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("4_bjj2j")
 
@@ -69,7 +75,8 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade7" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_k2hmu")]
+[node name="UpGoldGainMulti" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_k2hmu")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("5_kpond")
 
@@ -78,15 +85,33 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade13" parent="MarginContainer/VBoxContainer/MarginContainer9" unique_id=1848450648 instance=ExtResource("2_k2hmu")]
+[node name="UpMultiIronGain" parent="MarginContainer/VBoxContainer/MarginContainer9" unique_id=1848450648 instance=ExtResource("2_k2hmu")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("7_mbkh4")
+
+[node name="MarginContainer10" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=2103285845]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="UpIronGenCompo" parent="MarginContainer/VBoxContainer/MarginContainer10" unique_id=849418384 node_paths=PackedStringArray("timer") instance=ExtResource("2_k2hmu")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+script = ExtResource("8_glhvc")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="MarginContainer/VBoxContainer/MarginContainer10/UpIronGenCompo" unique_id=13382107]
 
 [node name="MarginContainer8" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=342301591]
 layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade8" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_k2hmu")]
+[node name="UpIronReset" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_k2hmu")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("6_te0sp")
+
+[connection signal="timeout" from="MarginContainer/VBoxContainer/MarginContainer2/UpCpsCompo/Timer" to="MarginContainer/VBoxContainer/MarginContainer2/UpCpsCompo" method="_on_timer_timeout"]
+[connection signal="timeout" from="MarginContainer/VBoxContainer/MarginContainer10/UpIronGenCompo/Timer" to="MarginContainer/VBoxContainer/MarginContainer10/UpIronGenCompo" method="_on_timer_timeout"]

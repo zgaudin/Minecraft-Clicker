@@ -30,7 +30,6 @@ anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_type_variation = &"HeaderLarge"
-text = "Gold: <value>"
 horizontal_alignment = 1
 script = ExtResource("2_13wmm")
 

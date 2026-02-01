@@ -14,10 +14,6 @@ func _enter_tree() -> void:
 
 @export var timer : Timer
 
-func _ready() -> void:
-	if Game.ref.data.iron_upgrades.u_01_gold_generation_level:
-		timer.start()
-		return
 
 	##HandlerIronUpgrades.ref.upgrade_leveled_up.connect(watch_for_upgrades_level_up)
 

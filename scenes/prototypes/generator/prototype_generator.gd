@@ -5,16 +5,12 @@ extends View
 @export var button : Button
 @export var timer : Timer
 
-var gold : int = 0
-
 @onready var animation: GeneratorAnimation = $GeneratorButton
-
 
 
 func _ready() -> void:
 	super()
 	visible = false
-
 
 
 func create_gold() -> void:

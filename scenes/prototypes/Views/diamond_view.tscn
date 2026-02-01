@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bv7fvexus5ef3" path="res://scenes/prototypes/upgrades/prototype_upgrades.gd" id="1_qccou"]
 [ext_resource type="PackedScene" uid="uid://k38gg867jjpj" path="res://scenes/prototypes/upgrades/components/compo_upgrade.tscn" id="2_sqecc"]
-[ext_resource type="Script" uid="uid://o4c1en1v01m4" path="res://scripts/upgrades/diamond_upgrades/compo_upgrade9.gd" id="3_iyiro"]
-[ext_resource type="Script" uid="uid://vor3h0xvwncq" path="res://scripts/upgrades/diamond_upgrades/compo_upgrade10.gd" id="4_phbmd"]
-[ext_resource type="Script" uid="uid://hm73b57mjd5w" path="res://scripts/upgrades/diamond_upgrades/compo_upgrade11.gd" id="5_11n1q"]
-[ext_resource type="Script" uid="uid://dwq6u0m46llcm" path="res://scripts/upgrades/diamond_upgrades/compo_upgrade12.gd" id="6_qccou"]
+[ext_resource type="Script" uid="uid://o4c1en1v01m4" path="res://scripts/upgrades/diamond_upgrades/UpDIronMultiCompo.gd" id="3_iyiro"]
+[ext_resource type="Script" uid="uid://vor3h0xvwncq" path="res://scripts/upgrades/diamond_upgrades/UpGoldExpoCompo.gd" id="4_phbmd"]
+[ext_resource type="Script" uid="uid://hm73b57mjd5w" path="res://scripts/upgrades/diamond_upgrades/UpDiamondMultiCompo.gd" id="5_11n1q"]
+[ext_resource type="Script" uid="uid://copc2icn624b1" path="res://scripts/upgrades/diamond_upgrades/UpDiamondIronCompo.gd" id="6_qccou"]
+[ext_resource type="Script" uid="uid://b2mksg12ka4w5" path="res://scripts/upgrades/diamond_upgrades/UpDiamondGenCompo.gd" id="7_sqecc"]
+[ext_resource type="Script" uid="uid://dwq6u0m46llcm" path="res://scripts/upgrades/diamond_upgrades/PrestigeCompo.gd" id="8_b8rrl"]
 
 [node name="PrototypeUpgrades" type="Control" unique_id=1024595591]
 layout_mode = 3
@@ -50,7 +52,8 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade9" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 instance=ExtResource("2_sqecc")]
+[node name="UpIronMultiCompo" parent="MarginContainer/VBoxContainer/MarginContainer2" unique_id=1592030265 instance=ExtResource("2_sqecc")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("3_iyiro")
 
@@ -59,7 +62,8 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade10" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_sqecc")]
+[node name="UpGoldExpoCompo" parent="MarginContainer/VBoxContainer/MarginContainer4" unique_id=1798342677 instance=ExtResource("2_sqecc")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("4_phbmd")
 
@@ -68,7 +72,8 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade11" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_sqecc")]
+[node name="UpDiamondMultiCompo" parent="MarginContainer/VBoxContainer/MarginContainer6" unique_id=1622356882 instance=ExtResource("2_sqecc")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("5_11n1q")
 
@@ -77,6 +82,30 @@ layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="CompoUpgrade12" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_sqecc")]
+[node name="UpDiamondIronCompo" parent="MarginContainer/VBoxContainer/MarginContainer8" unique_id=1620368637 instance=ExtResource("2_sqecc")]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 script = ExtResource("6_qccou")
+
+[node name="MarginContainer9" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1958616321]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="UpDiamondGenCompo" parent="MarginContainer/VBoxContainer/MarginContainer9" unique_id=1245143418 node_paths=PackedStringArray("timer") instance=ExtResource("2_sqecc")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+script = ExtResource("7_sqecc")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="MarginContainer/VBoxContainer/MarginContainer9/UpDiamondGenCompo" unique_id=1089358541]
+
+[node name="MarginContainer10" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=997971645]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="UpPrestige" parent="MarginContainer/VBoxContainer/MarginContainer10" unique_id=1003857396 instance=ExtResource("2_sqecc")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+script = ExtResource("8_b8rrl")
