@@ -36,8 +36,8 @@ layout_mode = 2
 theme_override_constants/separation = 16
 
 [node name="OverworldBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer" unique_id=1538106123]
-position = Vector2(947, 528.74994)
-scale = Vector2(1.918, 1.9262875)
+position = Vector2(1616, 1020.75006)
+scale = Vector2(3.2559998, 3.674068)
 texture = ExtResource("2_fr54p")
 
 [node name="HeaderLarge" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1333742052]

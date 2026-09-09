@@ -18,7 +18,8 @@ button = NodePath("Button")
 view = 1
 
 [node name="893929" type="Sprite2D" parent="." unique_id=1067588636]
-position = Vector2(969, 540)
+position = Vector2(1423.5, 886)
+scale = Vector2(1.4734375, 1.6407408)
 texture = ExtResource("2_3irh6")
 
 [node name="Button" type="Button" parent="." unique_id=521161654]
